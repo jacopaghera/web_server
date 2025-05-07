@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title><%= titolo%></title>
+</head>
+<body>
+  <div>
+  <%- include('partials/menu.ejs') %>
+  <h1><%= titolo %></h1>
+  </div>
+  <div>
+    <table rel="">
+      <thead>
+        <tr>
+          <th>nome</th>
+          <th>email</th>
+          <th>messaggio</th>
+          <th>data</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% movimenti.forEach(m => { %>
+          <tr>
+            <td><%= m.nome %></td>
+            <td><%= m.email %></td>
+            <td><%= m.quantity %></td>
+            <td><%= m.data %></td>
+          </tr>
+        <% }) %>
+        
+      </tbody>
+    </table>
+  </div>
+
+
+  <div>
+    <h3>Scrivimi</h3>
+    <form action="/tabella" method="post">
+      <div class="input-form">
+        <label for="name">Nome</label><br>
+        <input type="text" name="Nome" id="name">
+      </div>
+      <div class="input-form">
+        <label for="email">E-mail</label><br>
+        <input type="text" name="Email" id="email">
+      </div>
+      <div class="input-form">
+        <label for="quantity">Messaggio</label><br>
+        <textarea type="text" name="Quantity" id="quantity"></textarea>
+      </div>
+      <div class="input-form">
+        <input type="submit" value="Invia">
+      </div>
+  
+    </form>
+  </div>
+
+
+  <script src="script.js"></script>
+</body>
+</html>

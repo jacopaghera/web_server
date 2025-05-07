@@ -1,0 +1,43 @@
+html {
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.header {
+  margin: 10px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #333
+}
+
+.header-left {
+  padding: 5px;
+}
+
+/* .header-right */
+
+.main-menu {
+  display: flex;
+  list-style: none;
+}
+
+.main-menu > li {
+  margin-right: 20px;
+}
+
+table, th, td {
+  border: 1px soldi;
+}
+
+textarea {
+  width: 100%;
+  height: 150px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  resize: none;
+}
+
